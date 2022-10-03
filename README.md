@@ -1,2 +1,2 @@
 # python-darsi-javoblari
- The lesson from mohirdev.uz
+ python lesson from mohirdev.uz
