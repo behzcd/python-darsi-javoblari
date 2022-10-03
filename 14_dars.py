@@ -25,7 +25,7 @@ lugat = {
     'string':'matn',
     'if':'agar',
     'else':'aks holda',
-    'paranthesis':'qavs',
+    'parenthesis':'qavs',
     'list':"ro'yxat",
     'del':"o'chirish",
     'remove':'olib tashlash',
