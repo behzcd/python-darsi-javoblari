@@ -1,0 +1,14 @@
+open('file.txt','w') - Faylni yozish uchun ochish. Fayl mavjud bo'lmasa yangi fayl yaratadi. Fayl mavjud bo'lsa tarkibi o'chib ketadi 
+
+Faylni qatorma-qator o'qish:
+    filename = 'data/talabalar.txt'
+    with open(filename) as file:
+        for line in file:
+            print(line)
+
+Papka ichidagi fayllarni ochish:
+    with open('data/pi.txt') as fayl:
+    pi = fayl.read()
+
+Qatorlarni ro'yxat ko'rinishida saqlab olish uchun, .readlines() metodidan foydalanamiz.
+
