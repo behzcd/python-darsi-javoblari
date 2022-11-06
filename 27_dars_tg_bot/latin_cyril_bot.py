@@ -9,10 +9,11 @@ Created on Wed Oct 26 22:53:51 2022
 
 
 from transliterate import to_cyrillic, to_latin
+
 import telebot
 
 TOKEN = '5798225165:AAFbLfu42IY8Z3kLnv9oGriUEWRTSGB6Ps4'
-bot = telebot.TeleBot("TOKEN", parse_mode=None)
+bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -23,7 +24,10 @@ def send_welcome(message):
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
     msg = message.text
-    javob = lambda msg: to_cyrillic(msg) if msg.isascii() else to_latin(msg)
+    if msg.isascii():
+        javob = to_cyrillic(msg)
+    else:
+        javob = to_latin(msg)
     bot.reply_to(message, javob)
 
 bot.infinity_polling()
@@ -35,4 +39,4 @@ bot.infinity_polling()
 #     print(to_cyrillic(matn))
 # else:
 #     print(to_latin(matn))
-   
+
