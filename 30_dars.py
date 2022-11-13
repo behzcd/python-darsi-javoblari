@@ -85,12 +85,13 @@ class Talaba(Shaxs):
         return self.fanlar
         
     def remove_fan(self,fan):
-        for fan in self.fanlar:   
-            if fan not in self.fanlar:
-                print("Siz bu fanga yozilmagansiz")
-            else:
-                self.fanlar.remove(fan)
-                print('Bu fan ochirildi')
+        if fan not in self.fanlar:
+            ans = "Siz bu fanga yozilmagansiz"
+            return ans
+        else:
+            self.fanlar.remove(fan)
+            ans = 'Bu fan ochirildi'
+            return ans
 
 manzil1 = Manzil(46,'Mustaqillik','Namangan','Namangan')
 fan1 = Fan('AI','Kakani Vijay','6-326')
